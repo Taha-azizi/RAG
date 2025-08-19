@@ -1,0 +1,51 @@
+Product Name: Predator X15 Gaming Laptop
+Category: Electronics > Computers > Laptops
+Brand: Acer
+Price: $1,499
+
+Description:
+The Predator X15 is a high-performance gaming laptop designed for competitive play. 
+Equipped with a 15.6" QHD display at 240Hz, NVIDIA RTX 4070 GPU, Intel i9 processor, 
+and 32GB DDR5 RAM. The cooling system uses advanced AeroBlade™ fans for longer sessions.  
+
+Key Features:
+- 15.6" QHD, 240Hz Display
+- NVIDIA RTX 4070 8GB
+- Intel i9-13900H
+- 32GB DDR5 RAM, 1TB SSD
+- AeroBlade™ 3D Cooling System
+- Per-key RGB Keyboard
+
+Product Name: AirZoom Pegasus 40 Running Shoes
+Category: Fashion > Footwear > Sports Shoes
+Brand: Nike
+Price: $139
+
+Description:
+Built for daily training and long-distance comfort, the Pegasus 40 offers lightweight 
+cushioning and responsive Zoom Air units in both the forefoot and heel. The breathable 
+mesh upper keeps your feet cool while the redesigned midsole improves stability.  
+
+Key Features:
+- Lightweight mesh for ventilation
+- Zoom Air cushioning in forefoot & heel
+- Durable rubber outsole for road running
+- Neutral support for runners
+
+Product Name: BrewMaster Pro Coffee Maker
+Category: Home & Kitchen > Appliances > Coffee Machines
+Brand: Philips
+Price: $249
+
+Description:
+The BrewMaster Pro is a smart drip coffee machine with Wi-Fi connectivity and app 
+integration. Schedule brews from your phone, choose brew strength, and keep your 
+coffee warm for up to 2 hours with the thermal carafe.  
+
+Key Features:
+- 12-cup capacity
+- Wi-Fi & Mobile App Control
+- Adjustable brew strength
+- Stainless steel thermal carafe
+- Auto shut-off safety feature
+

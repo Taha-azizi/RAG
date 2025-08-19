@@ -1,22 +1,9 @@
-# Simple Local RAG (Ollama + Chroma + SentenceTransformers)
-
-This repo demonstrates a minimal Retrieval-Augmented Generation (RAG) pipeline that runs fully offline on your machine.
-
-## Stack
-- **Ollama** to run a local LLM (e.g., `mistral`, `llama3`)
-- **SentenceTransformers** for text embeddings
-- **ChromaDB** as the local vector database
-
-## Quickstart
-
-1) **Install Ollama** and pull a model:
-   ```bash
+This repo demonstrates a minimal Retrieval-Augmented Generation (RAG) pipeline that runs fully offline on your machine. ## Stack - **Ollama** to run a local LLM (e.g., mistral, llama3) - **SentenceTransformers** for text embeddings - **ChromaDB** as the local vector database ## Quickstart 1) **Install Ollama** and pull a model:
+bash
    # https://ollama.com/download
    ollama pull mistral
-   ```
-
 2) **Create a virtual environment & install dependencies**:
-   ```bash
+bash
    python -m venv .venv
    # Windows
    .venv\Scripts\activate
@@ -24,48 +11,12 @@ This repo demonstrates a minimal Retrieval-Augmented Generation (RAG) pipeline t
    # source .venv/bin/activate
 
    pip install -r requirements.txt
-   ```
-
-   > Note: For GPU acceleration, install the appropriate PyTorch build following the instructions at https://pytorch.org/get-started/locally/ before installing `sentence-transformers`.
-
-3) **Add your .txt files** to the `data/` folder (a sample is provided).
-
-4) **Run the pipeline**:
-   ```bash
+> Note: For GPU acceleration, install the appropriate PyTorch build following the instructions at https://pytorch.org/get-started/locally/ before installing sentence-transformers. 3) **Add your .txt files** to the data/ folder (a sample is provided). 4) **Run the pipeline**:
+bash
    python simple_rag.py --reset --query "What does the document say about renewable energy?"
-   ```
-
-   Common flags:
-   - `--data_dir data`            Folder with `.txt` files
-   - `--persist_dir .chroma`      Directory for Chroma persistence ('' for in-memory)
-   - `--collection local_rag`     Chroma collection name
-   - `--embed_model sentence-transformers/all-MiniLM-L6-v2`
-   - `--llm_model mistral`        (try `llama3` or `qwen` if installed)
-   - `--chunk_size 500 --overlap 50`
-   - `--n_results 3`
-
-5) **Example**:
-   ```bash
+Common flags: - --data_dir data Folder with .txt files - --persist_dir .chroma Directory for Chroma persistence ('' for in-memory) - --collection local_rag Chroma collection name - --embed_model sentence-transformers/all-MiniLM-L6-v2 - --llm_model mistral (try llama3 or qwen if installed) - --chunk_size 500 --overlap 50 - --n_results 3 5) **Example**:
+bash
    python simple_rag.py --reset --n_results 5 --query "List the barriers to renewable deployment mentioned in the documents."
-   ```
-
-## Project Structure
-
-```
-simple_rag_project/
-├─ simple_rag.py
-├─ utils/
-│  ├─ load.py
-│  ├─ chunking.py
-│  ├─ embeddings.py
-│  ├─ store.py
-│  └─ generation.py
-├─ data/
-│  └─ data.txt
-├─ requirements.txt
-└─ README.md
-```
-
 ## Notes
 - If `ollama` is not found in your PATH, start the Ollama app/daemon and ensure the CLI is available.
 - To start fresh, pass `--reset` to recreate the Chroma collection.
