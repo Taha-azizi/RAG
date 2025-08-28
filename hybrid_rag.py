@@ -4,6 +4,14 @@ from utils.chunking import chunk_documents
 from utils.embeddings import get_embedder, embed_texts
 from utils.store import get_client, get_or_create_collection, reset_collection, add_documents, query_collection
 from utils.generation import generate_with_ollama
+import nltk
+import os
+
+# Automatically download required tokenizer resources if not already present
+try:
+    nltk.data.find("tokenizers/punkt")
+except LookupError:
+    nltk.download("punkt")
 
 
 def build_and_query(
