@@ -241,3 +241,55 @@ This implementation demonstrates:
 - Scale to larger document collections
 
 Happy RAG-ing with MCP! 🚀
+
+Advanced RAG with ANN + Reranking
+High-performance Retrieval-Augmented Generation using FAISS Approximate Nearest Neighbors (ANN) search combined with cross-encoder reranking for maximum speed and accuracy.
+
+🚀 Features
+
+Lightning Fast Search: FAISS HNSW index for millisecond retrieval from large document collections
+High Precision: Cross-encoder reranking ensures the most relevant results rise to the top
+Scalable: Handles millions of products/documents efficiently
+Hybrid Scoring: Combines ANN similarity with cross-encoder relevance scores
+Interactive Mode: Real-time search and Q&A interface
+Benchmarking: Built-in performance comparison tools
+MCP Compatible: Works with existing MCP RAG infrastructure
+
+🏗️ Architecture
+Query → [ANN Retrieval] → [Reranking] → [LLM Generation] → Answer
+         (FAISS HNSW)     (CrossEncoder)   (Ollama/LLM)
+         Fast, Broad      Accurate, Refined  Grounded Answer
+
+📚 Technical Details
+ANN Search Algorithm
+
+Index: FAISS HNSW (Hierarchical Navigable Small World)
+Distance: Inner Product (cosine similarity with normalized vectors)
+Construction: Builds graph with configurable connectivity
+Search: Traverses graph to find approximate nearest neighbors
+
+Reranking Process
+
+ANN Retrieval: Get top-K candidates (default: 20)
+Cross-Encoder: Score query-document pairs
+Rerank: Sort by relevance scores
+Filter: Apply minimum score threshold
+Return: Top results (default: 5)
+
+Performance Characteristics
+
+Time Complexity: O(log N) for HNSW search
+Space Complexity: O(N * D) where N=docs, D=dimensions
+Scalability: Linear scaling to millions of documents
+Accuracy: ~1% recall drop vs exact search
+
+🤝 Contributing
+
+Follow existing code structure for compatibility
+Maintain utils/ function signatures for hybrid_rag.py integration
+Add comprehensive logging and error handling
+Include performance benchmarks for new features
+Update documentation and examples
+
+📄 License
+Compatible with existing MCP RAG project licensing.
